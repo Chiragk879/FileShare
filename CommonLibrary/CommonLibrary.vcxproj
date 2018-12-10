@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Unicode Debug|Win32">
+      <Configuration>Unicode Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Unicode Debug|x64">
+      <Configuration>Unicode Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Unicode Release|Win32">
+      <Configuration>Unicode Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Unicode Release|x64">
+      <Configuration>Unicode Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{37DBEAF8-BD30-4B84-A795-0ABDF23F8EBD}</ProjectGuid>
+    <RootNamespace>CommonLibrary</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccProvider>SAK</SccProvider>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\hp_worksite_common_FileShare.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\hp_worksite_common_FileShare.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\hp_worksite_common_FileShare.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\hp_worksite_common_FileShare.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">
+    <OutDir>..\..\lib\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(Configuration)\$(Platform)\</IntDir>
+    <IncludePath>$(VCInclude);$(WinSdkInclude);$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <SourcePath>$(VCSrcPath);$(VC_SourcePath);</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">
+    <OutDir>..\..\lib\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(Configuration)\$(Platform)\</IntDir>
+    <IncludePath>$(VCInclude);$(WinSdkInclude);$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <SourcePath>$(VCSrcPath);$(VC_SourcePath);</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|x64'">
+    <OutDir>..\fileshare_libs\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(Configuration)\$(Platform)\</IntDir>
+    <IncludePath>$(VCInclude);$(WinSdkInclude);$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <SourcePath>$(VCSrcPath);$(VC_SourcePath);</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|x64'">
+    <OutDir>..\fileshare_libs\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(Configuration)\$(Platform)\</IntDir>
+    <IncludePath>$(VCInclude);$(WinSdkInclude);$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(StlInclude_Iscs_Mlib);$(StlportInclude_Iscs_Mlib);$(MlibInclude_Iscs_Mlib);$(WinSdkInclude_Iscs_Mlib);$(VCInclude_Iscs_Mlib);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;WSNT_VS2008;__ENABLE_LOG__;_CRTDBG_MAP_ALLOC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(StlInclude_Iscs_Mlib);$(StlportInclude_Iscs_Mlib);$(MlibInclude_Iscs_Mlib);$(WinSdkInclude_Iscs_Mlib);$(VCInclude_Iscs_Mlib);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;WSNT_VS2008;__ENABLE_LOG__;LOG4CXX_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(StlportInclude_Iscs_Mlib);$(StlportInclude_Iscs);$(StlInclude_Iscs_Mlib);$(MlibInclude_Iscs_Mlib);$(RESTClient_Include);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_DEBUG;_LIB;WSNT_VS2008;__ENABLE_LOG__;_CRTDBG_MAP_ALLOC;_CRT_NO_VA_START_VALIDATION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <AssemblerOutput />
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BrowseInformation>true</BrowseInformation>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(StlportInclude_Iscs_Mlib);$(StlInclude_Iscs_Mlib);$(MlibInclude_Iscs_Mlib);$(RESTClient_Include);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;__ENABLE_LOG__;WSNT_VS2008;_CRT_NO_VA_START_VALIDATION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AccessRightsSection.cpp" />
+    <ClCompile Include="AuditLogManager.cpp" />
+    <ClCompile Include="AuthInfo.cpp" />
+    <ClCompile Include="ByteArray.cpp" />
+    <ClCompile Include="ByteBuffer.cpp" />
+    <ClCompile Include="ByteStreamReader.cpp" />
+    <ClCompile Include="CallReporter.cpp" />
+    <ClCompile Include="ComputerName.cpp" />
+    <ClCompile Include="Crypto\AesCmac128.cpp" />
+    <ClCompile Include="Crypto\CryptAes.cpp" />
+    <ClCompile Include="Crypto\HmacKeyFactory.cpp" />
+    <ClCompile Include="Crypto\HmacSha1Key.cpp" />
+    <ClCompile Include="Crypto\HmacSha256Key.cpp" />
+    <ClCompile Include="KeysSection.cpp" />
+    <ClCompile Include="NormalizedPath.cpp" />
+    <ClCompile Include="CryptAES_Utility.cpp" />
+    <ClCompile Include="PreauthIntegrityHash.cpp" />
+    <ClCompile Include="RestClientLogging.cpp" />
+    <ClCompile Include="ThreadPool.cpp" />
+    <ClCompile Include="ConfigManager.cpp" />
+    <ClCompile Include="ConfigurationElement.cpp" />
+    <ClCompile Include="ConfigurationSection.cpp" />
+    <ClCompile Include="CTracePacket.cpp" />
+    <ClCompile Include="DatabasesElement.cpp" />
+    <ClCompile Include="DatabasesSection.cpp" />
+    <ClCompile Include="DataStreamInfo.cpp" />
+    <ClCompile Include="DateTimeHelper.cpp" />
+    <ClCompile Include="DialectSection.cpp" />
+    <ClCompile Include="Directory.cpp" />
+    <ClCompile Include="EnumHelper.cpp" />
+    <ClCompile Include="ErrorConvertor.cpp" />
+    <ClCompile Include="EventHandler.cpp" />
+    <ClCompile Include="File.cpp" />
+    <ClCompile Include="File2.cpp" />
+    <ClCompile Include="FileSystemVolume.cpp" />
+    <ClCompile Include="FindFileInfo.cpp" />
+    <ClCompile Include="FindFileInfos.cpp" />
+    <ClCompile Include="Folder2.cpp" />
+    <ClCompile Include="FsFileHandle2.cpp" />
+    <ClCompile Include="FsFindFileHandle2.cpp" />
+    <ClCompile Include="Guid.cpp" />
+    <ClCompile Include="IFileSystem2.cpp" />
+    <ClCompile Include="IFileSystem2Monitor.cpp" />
+    <ClCompile Include="IManID.cpp" />
+    <ClCompile Include="KeyObject.cpp" />
+    <ClCompile Include="Later.cpp" />
+    <ClCompile Include="LinkedList.cpp" />
+    <ClCompile Include="LockingData.cpp" />
+    <ClCompile Include="LockRange.cpp" />
+    <ClCompile Include="logmgr.cpp" />
+    <ClCompile Include="LogSection.cpp" />
+    <ClCompile Include="MergeSection.cpp" />
+    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="Path.cpp" />
+    <ClCompile Include="PathManager.cpp" />
+    <ClCompile Include="Resources.cpp" />
+    <ClCompile Include="SafeArrayHelper.cpp" />
+    <ClCompile Include="SeverSection.cpp" />
+    <ClCompile Include="SharesSection.cpp" />
+    <ClCompile Include="SmbFileLockRange.cpp" />
+    <ClCompile Include="SmbLockRange.cpp" />
+    <ClCompile Include="SmbLockRangeManager.cpp" />
+    <ClCompile Include="SmbStatusException.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Unicode Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Stopwatch.cpp" />
+    <ClCompile Include="string.cpp" />
+    <ClCompile Include="StringBuilder.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="trace.cpp" />
+    <ClCompile Include="VersionSection.cpp" />
+    <ClCompile Include="VfsFileHandle.cpp" />
+    <ClCompile Include="VfsFindFileHandle.cpp" />
+    <ClCompile Include="XMLReader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AccessRightsSection.h" />
+    <ClInclude Include="ArrayWrapper.h" />
+    <ClInclude Include="AuditLogManager.h" />
+    <ClInclude Include="AuthInfo.h" />
+    <ClInclude Include="AuthType.h" />
+    <ClInclude Include="ByteArray.h" />
+    <ClInclude Include="ByteBuffer.h" />
+    <ClInclude Include="ByteStreamReader.h" />
+    <ClInclude Include="CallReporter.h" />
+    <ClInclude Include="ComputerName.h" />
+    <ClInclude Include="Crypto\AesCmac128.h" />
+    <ClInclude Include="Crypto\CryptAes.h" />
+    <ClInclude Include="Crypto\CryptKey.h" />
+    <ClInclude Include="FileSystemObjectIdInfo.h" />
+    <ClInclude Include="Crypto\HmacKeyFactory.h" />
+    <ClInclude Include="Crypto\HmacSha1Key.h" />
+    <ClInclude Include="Crypto\HmacSha256Key.h" />
+    <ClInclude Include="Crypto\IHmacKey.h" />
+    <ClInclude Include="KeysSection.h" />
+    <ClInclude Include="NormalizedPath.h" />
+    <ClInclude Include="CryptAES_Utility.h" />
+    <ClInclude Include="PreauthIntegrityHash.h" />
+    <ClInclude Include="SmartPtr.h" />
+    <ClInclude Include="ThreadPool.h" />
+    <ClInclude Include="CommonLibrary.h" />
+    <ClInclude Include="ConfigEnums.h" />
+    <ClInclude Include="ConfigManager.h" />
+    <ClInclude Include="ConfigurationElement.h" />
+    <ClInclude Include="ConfigurationSection.h" />
+    <ClInclude Include="CTracePacket.h" />
+    <ClInclude Include="DatabasesElement.h" />
+    <ClInclude Include="DatabasesSection.h" />
+    <ClInclude Include="DataStreamInfo.h" />
+    <ClInclude Include="DateTimeHelper.h" />
+    <ClInclude Include="DialectElement.h" />
+    <ClInclude Include="DialectsSection.h" />
+    <ClInclude Include="Directory.h" />
+    <ClInclude Include="EnumHelper.h" />
+    <ClInclude Include="Enums.h" />
+    <ClInclude Include="ErrorCode.h" />
+    <ClInclude Include="ErrorConvertor.h" />
+    <ClInclude Include="EventHandler.h" />
+    <ClInclude Include="File.h" />
+    <ClInclude Include="File2.h" />
+    <ClInclude Include="FileAttributeData.h" />
+    <ClInclude Include="FileChangeInfo.h" />
+    <ClInclude Include="FileInfoByHandleClass.h" />
+    <ClInclude Include="FileInformation.h" />
+    <ClInclude Include="FileSystemAttributeInformation.h" />
+    <ClInclude Include="FileSystemControlInfo.h" />
+    <ClInclude Include="FileSystemDeviceInfo.h" />
+    <ClInclude Include="FileSystemSizeInfo.h" />
+    <ClInclude Include="FileSystemVolume.h" />
+    <ClInclude Include="FindFileInfo.h" />
+    <ClInclude Include="FindFileInfos.h" />
+    <ClInclude Include="FindInformationLevel.h" />
+    <ClInclude Include="Folder2.h" />
+    <ClInclude Include="fsdefs.h" />
+    <ClInclude Include="FsFileHandle2.h" />
+    <ClInclude Include="FsFindFileHandle2.h" />
+    <ClInclude Include="Guid.h" />
+    <ClInclude Include="IAuthInfo.h" />
+    <ClInclude Include="IAsyncResult.h" />
+    <ClInclude Include="IFile2Enumerator.h" />
+    <ClInclude Include="IFileInformationLevel.h" />
+    <ClInclude Include="IFileSystem2.h" />
+    <ClInclude Include="IFileSystem2Monitor.h" />
+    <ClInclude Include="IManID.h" />
+    <ClInclude Include="INotification.h" />
+    <ClInclude Include="IVfs2.h" />
+    <ClInclude Include="KeyObject.h" />
+    <ClInclude Include="Later.h" />
+    <ClInclude Include="LockingData.h" />
+    <ClInclude Include="LockRange.h" />
+    <ClInclude Include="logmgr.h" />
+    <ClInclude Include="LogSection.h" />
+    <ClInclude Include="MergeSection.h" />
+    <ClInclude Include="Path.h" />
+    <ClInclude Include="PathManager.h" />
+    <ClInclude Include="Resources.h" />
+    <ClInclude Include="SafeArrayHelper.h" />
+    <ClInclude Include="SectionType.h" />
+    <ClInclude Include="ServerSection.h" />
+    <ClInclude Include="ShareElement.h" />
+    <ClInclude Include="SharesSection.h" />
+    <ClInclude Include="SmbFileLockRange.h" />
+    <ClInclude Include="SmbLockRange.h" />
+    <ClInclude Include="SmbLockRangeManager.h" />
+    <ClInclude Include="SmbStatusException.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Stopwatch.h" />
+    <ClInclude Include="string.h" />
+    <ClInclude Include="StringBuilder.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="trace.h" />
+    <ClInclude Include="Utils.h" />
+    <ClInclude Include="VersionSection.h" />
+    <ClInclude Include="VfsFileHandle.h" />
+    <ClInclude Include="VfsFindFileHandle.h" />
+    <ClInclude Include="VolumeInformation.h" />
+    <ClInclude Include="XMLReader.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
